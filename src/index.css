@@ -1,13 +1,104 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
 body {
+  background-color: #6d4c41; /* Dark brown background for the whole page */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Dancing Script', cursive; /* Cursive font for a swiggly effect */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  background-color: #e0e0e0; /* Darker bone white for the content area */
+  border: 2px solid #b0b0b0; /* Slightly darker grey outline around the edges */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 1400px; /* Increased size of the content area */
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: #00274d; /* Darker blue for the header */
+  color: #ffffff; /* White text for the title */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2.5rem; /* Larger font size for a prominent header */
+  font-weight: 700;
+  border-radius: 8px 8px 0 0;
+  position: relative; /* For absolute positioning of white lines */
+  font-family: 'Dancing Script', cursive; /* Cursive font for the header */
+  overflow: hidden; /* Hide overflow to keep lines within the header */
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #b0b0b0; /* Darker bone white line at the top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #b0b0b0; /* Darker bone white line at the bottom */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+}
+
+.meal-box {
+  border: none;
+  background: #5d4037; /* Darker brown for meal cards */
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.meal-box img {
+  border-bottom: 1px solid #b0b0b0; /* Darker bone white border for image separation */
+  width: 100%; /* Ensure images fit within their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.meal-box h5 {
+  background-color: #00274d; /* Darker blue background for dish names */
+  color: #ffffff; /* White text for meal names */
+  font-weight: 600;
+  padding: 10px;
+  font-family: 'Dancing Script', cursive; /* Cursive font for meal names */
+}
+
+.item-details {
+  padding: 20px;
+}
+
+input {
+  border: 1px solid #000000; /* Black border for input fields */
+  border-radius: 4px;
+  padding: 10px;
+  font-family: 'Dancing Script', cursive; /* Cursive font for inputs */
+}
+
+button {
+  background-color: #4caf50; /* Green button */
+  color: #fff;
+  font-family: 'Dancing Script', cursive; /* Cursive font for button text */
+}
+
+button:hover {
+  background-color: #388e3c; /* Darker green on hover */
 }
