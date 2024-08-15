@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 /* tailwind CSS directives */
 @tailwind base;
 @tailwind components;
@@ -5,98 +8,117 @@
 
 /* custom styles */
 body {
-  background-color: #6d4c41; /* dark brown background for the whole page */
+  background-color: #2F3645; /* dark background for the whole page */
   margin: 0;
   padding: 0;
-  font-family: 'Dancing Script', cursive; /* cursive font for a swiggly effect */
+  font-family: 'Montserrat', sans-serif; /* Clean, square-ish sans-serif font */
+  color: #EEEDEB; /* Light bone white for text to contrast against dark background */
 }
 
 .container {
-  background-color: #e0e0e0; /* darker bone white for the content area */
-  border: 2px solid #b0b0b0; /* slightly darker grey outline around the edges */
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 1400px; /* increased size of the content area */
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #EEEDEB; /* light bone white for the content area */
+  border: 2px solid #939185; /* slightly darker grey outline around the edges */
+  border-radius: 10px;
+  padding: 30px; /* Increased padding for a more spacious feel */
+  max-width: 1400px; /* Increased width for better text fitting */
+  margin: 40px auto; /* Increased margin for a balanced layout */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
 }
 
 header {
-  background-color: #00274d; /* darker blue for the header */
-  color: #ffffff; /* white text for the title */
+  background-color: #2F3645; /* darker color for the header */
+  color: #EEEDEB; /* light text for contrast */
   text-align: center;
-  padding: 20px 0;
-  font-size: 2.5rem; /* larger font size for a prominent header */
-  font-weight: 700;
-  border-radius: 8px 8px 0 0;
+  padding: 30px 0; /* Increased padding for a more prominent header */
+  font-size: 3rem; /* Larger font size for title */
+  font-weight: 800; /* Bolder font weight for more emphasis */
+  border-radius: 10px 10px 0 0;
   position: relative; /* for absolute positioning of white lines */
-  font-family: 'Dancing Script', cursive; /* cursive font for the header */
   overflow: hidden; /* hide overflow to keep lines within the header */
 }
 
-header::before {
+header::before, header::after {
   content: '';
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
-  height: 5px;
-  background: #b0b0b0; /* darker bone white line at the top */
+  height: 4px;
+  background: #939185; /* greyish line for contrast */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+header::before {
+  top: 0;
+}
+
 header::after {
-  content: '';
-  position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: #b0b0b0; /* darker bone white line at the bottom */
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
   margin: 0;
+  font-size: inherit; /* Ensures the h1 element inherits the larger font size */
 }
 
 .meal-box {
-  border: none;
-  background: #5d4037; /* darker brown for meal cards */
-  border-radius: 8px;
+  border: 2px solid #2F3645; /* Blue outline around the edges of the meal box */
+  background: #D0B8A8; /* lighter brownish color for meal cards */
+  border-radius: 10px;
   overflow: hidden;
-  margin: 10px 0;
+  margin: 20px 0;
+  padding: 20px; /* Increased padding for more space */
+  width: 100%; /* Set width to 100% for full container width */
+  max-width: 1000px; /* Increased max-width to fit more text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 .meal-box img {
-  border-bottom: 1px solid #b0b0b0; /* darker bone white border for image separation */
-  width: 100%; /* ensure images fit within their containers */
-  height: auto; /* maintain aspect ratio */
+  border-bottom: 2px solid #939185; /* Slightly thicker border for separation */
+  width: 100%; /* Ensure images fit within their containers */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .meal-box h5 {
-  background-color: #00274d; /* darker blue background for dish names */
-  color: #ffffff; /* white text for meal names */
+  background-color: transparent; /* Remove background color */
+  color: #2F3645; /* Darker text color for contrast */
   font-weight: 600;
-  padding: 10px;
-  font-family: 'Dancing Script', cursive; /* cursive font for meal names */
+  padding: 15px; /* Increased padding for better spacing */
+  font-size: 1rem; /* Decreased font size for better fit */
+  text-align: center; /* Center-align text */
+  display: flex; /* Use flexbox to center the text vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensures the text is centered vertically within its container */
 }
 
 .item-details {
   padding: 20px;
+  font-size: 0.9rem; /* Slightly smaller font for details */
+  color: #2F3645; /* Darker text color for readability */
 }
 
 input {
-  border: 1px solid #000000; /* black border for input fields */
-  border-radius: 4px;
+  border: 1px solid #939185; /* Subtle border for inputs */
+  border-radius: 5px;
   padding: 10px;
-  font-family: 'Dancing Script', cursive; /* cursive font for inputs */
+  font-family: 'Montserrat', sans-serif; /* Clean font for inputs */
+  width: 100%; /* Full-width input fields */
+  margin-bottom: 20px; /* Space between inputs and other elements */
+  font-size: 0.9rem; /* Smaller font size for input fields */
+  color: #000000; /* Updated font color to black for better visibility */
 }
 
 button {
   background-color: #4caf50; /* green button */
   color: #fff;
-  font-family: 'Dancing Script', cursive; /* cursive font for button text */
+  font-family: 'Montserrat', sans-serif; /* Clean font for button text */
+  padding: 10px 20px; /* Increased padding for a modern button look */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Pointer cursor for interactivity */
+  font-weight: 600; /* Bold font for emphasis */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  font-size: 0.9rem; /* Slightly smaller font size */
 }
 
 button:hover {
