@@ -1,5 +1,5 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+/* import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 /* tailwind CSS directives */
 @tailwind base;
@@ -8,119 +8,119 @@
 
 /* custom styles */
 body {
-  background-color: #2F3645; /* dark background for the whole page */
+  background-color: #3A3A3A; 
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif; /* Clean, square-ish sans-serif font */
-  color: #EEEDEB; /* Light bone white for text to contrast against dark background */
+  font-family: 'VT323', monospace; /* retro computer-style font */
+  color: #D3D3D3;
+  text-shadow: 1px 1px 2px #000; 
 }
 
 .container {
-  background-color: #EEEDEB; /* light bone white for the content area */
-  border: 2px solid #939185; /* slightly darker grey outline around the edges */
-  border-radius: 10px;
-  padding: 30px; /* Increased padding for a more spacious feel */
-  max-width: 1400px; /* Increased width for better text fitting */
-  margin: 40px auto; /* Increased margin for a balanced layout */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
+  background-color: #484848; 
+  border: 4px solid #595A6C; 
+  border-radius: 3px; 
+  padding: 30px;
+  max-width: 1400px;
+  margin: 40px auto;
+  box-shadow: 4px 4px 0px #707193, 8px 8px 0px #2F2F2F; /* multi-layer pixel shadow for depth */
+  position: relative;
 }
 
 header {
-  background-color: #2F3645; /* darker color for the header */
-  color: #EEEDEB; /* light text for contrast */
+  background-color: #2F2F2F; /* brighter black for header */
+  color: #D49A9A; /* soft pink for Recipe Helper title */
   text-align: center;
-  padding: 30px 0; /* Increased padding for a more prominent header */
-  font-size: 3rem; /* Larger font size for title */
-  font-weight: 800; /* Bolder font weight for more emphasis */
-  border-radius: 10px 10px 0 0;
-  position: relative; /* for absolute positioning of white lines */
-  overflow: hidden; /* hide overflow to keep lines within the header */
-}
-
-header::before, header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #939185; /* greyish line for contrast */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-header::before {
-  top: 0;
-}
-
-header::after {
-  bottom: 0;
+  padding: 20px 0;
+  font-size: 2.5rem;
+  font-family: 'Press Start 2P', monospace; 
+  border-radius: 0px; 
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #707193; /* strong pixelated border */
 }
 
 header h1 {
   margin: 0;
-  font-size: inherit; /* Ensures the h1 element inherits the larger font size */
+  font-size: inherit;
 }
 
 .meal-box {
-  border: 2px solid #2F3645; /* Blue outline around the edges of the meal box */
-  background: #D0B8A8; /* lighter brownish color for meal cards */
-  border-radius: 10px;
+  border: 4px solid #5E5F7A; 
+  background: #565656; /* brighter gray for meal cards */
+  border-radius: 0px; 
   overflow: hidden;
   margin: 20px 0;
-  padding: 20px; /* Increased padding for more space */
-  width: 100%; /* Set width to 100% for full container width */
-  max-width: 1000px; /* Increased max-width to fit more text */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 4px 4px 0px #707193, 8px 8px 0px #2F2F2F; 
+  position: relative;
 }
 
 .meal-box img {
-  border-bottom: 2px solid #939185; /* Slightly thicker border for separation */
-  width: 100%; /* Ensure images fit within their containers */
-  height: auto; /* Maintain aspect ratio */
+  border-bottom: 4px solid #707193; 
+  width: 100%;
+  height: auto;
 }
 
 .meal-box h5 {
-  background-color: transparent; /* Remove background color */
-  color: #2F3645; /* Darker text color for contrast */
+  background-color: transparent;
+  color: #D3D3D3; 
+  font-family: 'VT323', monospace; 
   font-weight: 600;
-  padding: 15px; /* Increased padding for better spacing */
-  font-size: 1rem; /* Decreased font size for better fit */
-  text-align: center; /* Center-align text */
-  display: flex; /* Use flexbox to center the text vertically and horizontally */
+  padding: 15px;
+  font-size: 1.3rem; 
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Ensures the text is centered vertically within its container */
+  border-top: 4px solid #707193; 
+  border-bottom: 4px solid #707193; 
 }
 
 .item-details {
   padding: 20px;
-  font-size: 0.9rem; /* Slightly smaller font for details */
-  color: #2F3645; /* Darker text color for readability */
+  font-size: 1.1rem; 
+  color: #D3D3D3; 
+  background-color: #3E3E3E; 
+  border-radius: 0px; 
+  border: 4px solid #595A6C; 
+  box-shadow: 2px 2px 0px #707193, 4px 4px 0px #2F2F2F; /* pixelated shadow for depth */
 }
 
 input {
-  border: 1px solid #939185; /* Subtle border for inputs */
-  border-radius: 5px;
+  border: 3px solid #707193; 
+  border-radius: 0px; 
   padding: 10px;
-  font-family: 'Montserrat', sans-serif; /* Clean font for inputs */
-  width: 100%; /* Full-width input fields */
-  margin-bottom: 20px; /* Space between inputs and other elements */
-  font-size: 0.9rem; /* Smaller font size for input fields */
-  color: #000000; /* Updated font color to black for better visibility */
+  font-family: 'VT323', monospace; /* retro monospace font */
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1.1rem; 
+  color: #D3D3D3; 
+  background-color: #383838; 
+  box-shadow: inset 2px 2px 4px #000; 
 }
 
 button {
-  background-color: #4caf50; /* green button */
-  color: #fff;
-  font-family: 'Montserrat', sans-serif; /* Clean font for button text */
-  padding: 10px 20px; /* Increased padding for a modern button look */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer; /* Pointer cursor for interactivity */
-  font-weight: 600; /* Bold font for emphasis */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
-  font-size: 0.9rem; /* Slightly smaller font size */
+  background-color: #6A6B8E; 
+  color: #FFF;
+  font-family: 'VT323', monospace;
+  padding: 10px 20px;
+  border: 4px solid #707193; /* pixelated border */
+  border-radius: 0px; /* sharp corners */
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem; 
+  box-shadow: 4px 4px 0px #707193, 8px 8px 0px #2F2F2F; 
 }
 
 button:hover {
-  background-color: #388e3c; /* darker green on hover */
+  background-color: #565778; 
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(4px, 4px); 
 }
